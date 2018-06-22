@@ -1,11 +1,15 @@
+package com.acme;
+
+import com.acme.explovise.OrderIncendiary;
+import com.acme.poisons.OrderPoison;
 
 public class App {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Order order1=new Order("arun", "tnt");
-		Order order2=new Order("aravind", "arsenic");
+		Order order1=new OrderIncendiary("arun", "tnt");
+		Order order2=new OrderPoison("aravind", "arsenic");
 		Order order3=new Order("rakesh", "stuff");
 
 		Fulfillment fulfillment=new Fulfillment();
