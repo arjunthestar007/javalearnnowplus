@@ -10,10 +10,9 @@ public class OrderIncendiary extends Order{
 	}
 	
 	@Override
-	public String getShippingInstructions() {
-		// TODO Auto-generated method stub
-		return super.getShippingInstructions()
-				+"\nadd special incendiary instructiions";
+	public String getSpecialShippingAddress() {
+		
+		return "add special instructions for incedendary";
 	}
 
 }

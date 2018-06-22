@@ -23,10 +23,24 @@ public class Order {
 		this.productId = productId;
 	}
 	
-	public String getShippingInstructions(){
-		return "Ship via standard freight";
+	// cannot be changeable in subclass
+	public final String getShippingInstructions(){
+		String shipping="Ship via standard freight ";
+		
+		if("coyote".equals(this.customerId)){
+			shipping="ship via expedited freight";
+		}
+		if("tnt".equals(this.productId)){
+			shipping+="\n notify authorites";
+		}
+		
+		return shipping+"\nSpecial shipping : "+getSpecialShippingAddress();
 	}
 	
+	// can changeable in subclass
+	protected String getSpecialShippingAddress() {
+		return "";
+	}
 	public void print(){
 		System.out.println("customer id:"+this.customerId+" product id:" +this.productId);
 	}

@@ -11,7 +11,7 @@ public class OrderPoison extends Order {
 	
 	
 	@Override
-	public String getShippingInstructions() {
+	public String getSpecialShippingAddress() {
 		// TODO Auto-generated method stub
 		return "add special instructions for poison";
 	}
