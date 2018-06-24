@@ -12,6 +12,10 @@ public class App {
 		Order order2=new OrderPoison("coyote", "arsenic");
 		Order order3=new OrderPoison("coyote", "hydrazine");
 		
+		System.out.println(order1.compareTo(order2));
+		System.out.println(order2.compareTo(order3));
+		System.out.println(order3.compareTo(order1));
+		
         
 		Fulfillment fulfillment=new Fulfillment();
 		try {

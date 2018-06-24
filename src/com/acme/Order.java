@@ -1,6 +1,6 @@
 package com.acme;
 
-public abstract class Order {
+public abstract class Order implements Comparable<Order>{
 	String customerId;
 	String productId;
 	
@@ -12,6 +12,7 @@ public abstract class Order {
 	public String getCustomerId() {
 		return customerId;
 	}
+	
 	public void setCustomerId(String customerId) {
 		this.customerId = customerId;
 	}
@@ -72,17 +73,16 @@ public abstract class Order {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "customer id:"+this.customerId+" product id:" +this.productId;
 
 	}
 
 
-
+	@Override
+	public int compareTo(Order order) {
+		return getProductId().compareTo(order.getProductId());
+	}
 	
-//	public void print(){
-//		System.out.println("customer id:"+this.customerId+" product id:" +this.productId);
-//	}
 
 
 }
