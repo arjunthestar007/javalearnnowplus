@@ -1,6 +1,6 @@
 package com.acme;
 
-public abstract class Order implements Comparable<Order>{
+public abstract class Order implements Shipment,Comparable<Order>{
 	String customerId;
 	String productId;
 	

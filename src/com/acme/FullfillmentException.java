@@ -1,34 +1,34 @@
 package com.acme;
 
-public class OrderFullfillmentException extends Exception {
+public class FullfillmentException extends Exception {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public OrderFullfillmentException() {
+	public FullfillmentException() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public OrderFullfillmentException(String message, Throwable cause, boolean enableSuppression,
+	public FullfillmentException(String message, Throwable cause, boolean enableSuppression,
 			boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 		// TODO Auto-generated constructor stub
 	}
 
-	public OrderFullfillmentException(String message, Throwable cause) {
+	public FullfillmentException(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}
 
-	public OrderFullfillmentException(String message) {
+	public FullfillmentException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
 
-	public OrderFullfillmentException(Throwable cause) {
+	public FullfillmentException(Throwable cause) {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
