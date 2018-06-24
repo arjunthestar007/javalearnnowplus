@@ -1,7 +1,6 @@
 package com.acme;
 
 public class Order {
-	
 	String customerId;
 	String productId;
 	
@@ -41,8 +40,44 @@ public class Order {
 	protected String getSpecialShippingAddress() {
 		return "";
 	}
+	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((customerId == null) ? 0 : customerId.hashCode());
+		result = prime * result + ((productId == null) ? 0 : productId.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Order other = (Order) obj;
+		if (customerId == null) {
+			if (other.customerId != null)
+				return false;
+		} else if (!customerId.equals(other.customerId))
+			return false;
+		if (productId == null) {
+			if (other.productId != null)
+				return false;
+		} else if (!productId.equals(other.productId))
+			return false;
+		return true;
+	}
+
+
+
+	
 	public void print(){
 		System.out.println("customer id:"+this.customerId+" product id:" +this.productId);
 	}
+
 
 }
