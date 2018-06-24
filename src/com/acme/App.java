@@ -9,8 +9,9 @@ public class App {
 		// TODO Auto-generated method stub
 		
 		Order order1=new OrderIncendiary("coyote", "tnt");
-		Order order2=new OrderPoison("", "arsenic");
+		Order order2=new OrderPoison("coyote", "arsenic");
 		Order order3=new OrderPoison("coyote", "hydrazine");
+		
         
 		Fulfillment fulfillment=new Fulfillment();
 		try {

@@ -1,6 +1,6 @@
 package com.acme;
 
-public class Order {
+public abstract class Order {
 	String customerId;
 	String productId;
 	
@@ -36,10 +36,8 @@ public class Order {
 		return shipping+"\nSpecial shipping : "+getSpecialShippingAddress();
 	}
 	
-	// can changeable in subclass
-	protected String getSpecialShippingAddress() {
-		return "";
-	}
+	// at the time of design dont know how to implement.it may be diff in subclass
+	abstract protected String getSpecialShippingAddress();
 	
 
 	@Override
