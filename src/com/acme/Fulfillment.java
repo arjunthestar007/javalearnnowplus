@@ -6,7 +6,7 @@ public class Fulfillment {
 
 		for (Order order : orders) {
 			System.out.println(order.getShippingInstructions());
-			order.print();
+			System.out.println(order);
 			System.out.println();
 		}
 

@@ -71,13 +71,20 @@ public class Order {
 			return false;
 		return true;
 	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "customer id:"+this.customerId+" product id:" +this.productId;
+
+	}
 
 
 
 	
-	public void print(){
-		System.out.println("customer id:"+this.customerId+" product id:" +this.productId);
-	}
+//	public void print(){
+//		System.out.println("customer id:"+this.customerId+" product id:" +this.productId);
+//	}
 
 
 }
