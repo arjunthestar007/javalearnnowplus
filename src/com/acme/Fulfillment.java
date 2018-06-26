@@ -1,8 +1,10 @@
 package com.acme;
 
+import java.util.List;
+
 public class Fulfillment {
 
-	public void process(Shipment... shipments) throws FullfillmentException{
+	public void process(List<Shipment> shipments) throws FullfillmentException{
 
 		for (Shipment order : shipments) {
 			if("".equals(order.getCustomerId())){
