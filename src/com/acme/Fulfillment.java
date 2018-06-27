@@ -1,5 +1,7 @@
 package com.acme;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Fulfillment {
@@ -12,13 +14,35 @@ public class Fulfillment {
 			}	
 		}
 		
+		
+		List<Shipment> shipmentForAuthorities=new ArrayList<Shipment>();
+		
+		for (Iterator<Shipment> iterator = shipments.iterator(); iterator.hasNext();) {
+			Shipment shipment = (Shipment) iterator.next();
+			if(shipment.getShippingInstructions().contains("notify authorites")){
+				iterator.remove();
+				shipmentForAuthorities.add(shipment);
+			}
+			
+		}
+		
+		for (Shipment shipment : shipmentForAuthorities) {
+			processShipment("pending authority", shipment);
+		}
+		
+		
 		for (Shipment shipment : shipments) {
-			System.out.println(shipment.getShippingInstructions());
-			System.out.println(shipment);
-			System.out.println();
+			processShipment("regular",shipment);
 		}
 
 
+	}
+
+	private void processShipment(String processname,Shipment shipment) {
+		System.out.println("---------"+processname);
+		System.out.println(shipment.getShippingInstructions());
+		System.out.println(shipment);
+		System.out.println();
 	}
 
 }
